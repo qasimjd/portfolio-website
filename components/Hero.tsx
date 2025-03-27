@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, ChevronDown, Github, Instagram, Linkedin, Twitter } from "lucide-react"
+import { ArrowRight, ChevronDown, Github, Instagram, Linkedin } from "lucide-react"
 import Link from "next/link"
 
 export function Hero() {
