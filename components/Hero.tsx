@@ -34,11 +34,11 @@ export function Hero() {
                         className={`flex flex-col justify-center space-y-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
                     >
                         <div className="inline-block rounded-lg bg-muted/30 border border-border/40 backdrop-blur-sm px-3 py-1 text-sm transition-all duration-700 delay-100 animate-fade-in">
-                            Hello, I'm a Full-Stack Developer
+                           {"Hello, I'm a Full-Stack Developer"}
                         </div>
 
                         <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                            I'm{" "}
+                            I&apos;m{" "}
                             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-gradient bg-300%">
                                 Qasim JD
                             </span>

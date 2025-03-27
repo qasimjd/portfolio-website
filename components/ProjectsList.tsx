@@ -36,8 +36,6 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
       ? projects
       : projects.filter((project) => project.category === activeFilter);
 
-  const categories = ["all", ...new Set(projects.map((p) => p.category))];
-
   return (
     <section id="projects" className="py-20 md:py-32">
       <div className="container px-4 md:px-6">
@@ -47,7 +45,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
           </div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Projects</h2>
           <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Explore some of my recent projects and the technologies I've worked with.
+            Explore some of my recent projects and the technologies I&apos;ve worked with.
           </p>
         </div>
 
@@ -68,7 +66,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <Card
               key={project.id}
               className="group overflow-hidden border border-primary/50 bg-muted/10 backdrop-blur-sm hover:shadow-xl transition-all duration-300 animate-on-scroll">

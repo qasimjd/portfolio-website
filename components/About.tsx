@@ -26,18 +26,18 @@ export function About() {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold">Full-Stack Developer & UI/UX Enthusiast</h3>
+            <h3 className="text-2xl font-bold">Full-Stack Developer &amp; UI/UX Enthusiast</h3>
             <p className="text-muted-foreground">
-              I'm Qasim Jd, a passionate full-stack developer with a keen eye for design and user experience. I
+              I&apos;m Qasim Jd, a passionate full-stack developer with a keen eye for design and user experience. I
               specialize in building modern, responsive web applications.
             </p>
             <p className="text-muted-foreground">
-              With a background in computer science and several years of experience in web development, I've worked on a
-              variety of projects ranging from small business websites to complex web applications. I'm constantly
+              With a background in computer science and several years of experience in web development, I&apos;ve worked on a
+              variety of projects ranging from small business websites to complex web applications. I&apos;m constantly
               learning and exploring new technologies to stay at the forefront of web development.
             </p>
             <p className="text-muted-foreground">
-              When I'm not coding, you can find me exploring new trends, contributing to open-source projects.
+              When I&apos;m not coding, you can find me exploring new trends, contributing to open-source projects.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4">
@@ -62,7 +62,7 @@ export function About() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
 
