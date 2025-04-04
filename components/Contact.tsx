@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, Send, Github, Linkedin, Instagram, Loader2 } from "lucide-react"
+import { Mail, Phone, Send, Github, Linkedin, Instagram, Loader2, CircleArrowDownIcon } from "lucide-react"
 import Link from "next/link"
 import emailjs from "@emailjs/browser"
 import { toast } from "sonner"
@@ -55,6 +55,8 @@ export function Contact() {
                 <div className="flex flex-col items-center justify-center space-y-4 text-center animate-on-scroll">
                     <div className="inline-block rounded-lg bg-primary/10 border border-primary/20 px-3 py-1 text-sm text-primary">
                         Get In Touch
+                        <CircleArrowDownIcon className="inline-block ml-2 h-4 w-4 animate-bounce" />
+
                     </div>
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contact Me</h2>
                     <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -128,7 +130,7 @@ export function Contact() {
                                 </div>
                                 <Button
                                     type="submit"
-                                    className="w-full bg-gradient-to-r from-primary to-primary hover:from-primary/90 hover:to-primary/90 text-white cursor-pointer"
+                                    className="w-full bg-primary hover:primary/90 text-white cursor-pointer"
                                     disabled={submiting}
                                 >
                                     {submiting ? (

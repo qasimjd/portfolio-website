@@ -1,11 +1,11 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { ModeToggle } from "./ThemeToggle"
+import { AuroraText } from "./magicui/aurora-text"
 import { MobileMenu } from "./MobileMenu"
-import { ThemeToggle } from "./ThemeToggle"
 
 export function Header() {
   return (
-    <header className="fixed top-0 z-50 w-full px-4 md:px-6 transition-all duration-300">
+    <header className="fixed top-0 z-50 w-full px-4 md:px-6">
       <div className="container flex items-center justify-between bg-background/70 backdrop-blur-md border-b border-border/40 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 text-xl font-bold">
@@ -13,33 +13,30 @@ export function Header() {
             <span className="text-primary-foreground">JD</span>
           </div>
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            qasimjd.tech
+            <AuroraText colors={["#00b49c", "#3071ffa2"]}>qasimjd.tech</AuroraText>
           </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-        <ThemeToggle />
-        
+          <ModeToggle />
+
           {["Home", "About", "Projects", "Contact"].map((name) => (
             <Link
               key={name}
               href={`#${name.toLowerCase()}`}
-              className="text-sm font-medium transition-colors hover:text-foreground relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+              className="text-sm font-medium transition-colors text-muted-foreground hover:text-foreground relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
             >
               {name}
             </Link>
           ))}
-          <Button
-            className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white cursor-pointer"
-            asChild
-          >
-            <Link href="#contact">Get In Touch</Link>
-          </Button>
+
         </nav>
-        
-        <div className="md:hidden transition-all">
-          <ThemeToggle />
+
+        {/* Mobile Navigation */}
+
+        <div className="block md:hidden">
+          <ModeToggle />
           <MobileMenu />
         </div>
       </div>

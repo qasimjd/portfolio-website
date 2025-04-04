@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Github, Instagram, Linkedin, Mail } from "lucide-react"
+import { AuroraText } from "./magicui/aurora-text"
 
 export function Footer() {
   return (
@@ -10,13 +11,12 @@ export function Footer() {
             <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-primary">
               <span className="text-primary-foreground">JD</span>
             </div>
-            <span className="bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">Qasim Jd</span>
+            <AuroraText colors={["#00b49c", "#3071ffa2"]}>qasimjd.tech</AuroraText>
           </Link>
 
-          <p className="max-w-[500px] text-muted-foreground">
-            A passionate full-stack developer focused on creating intuitive and dynamic web experiences with modern
-            technologies.
-          </p>
+            <p className="max-w-[500px] text-muted-foreground">
+            A passionate full-stack and backend developer dedicated to building scalable, efficient, and intuitive web solutions using modern technologies.
+            </p>
 
           <div className="flex space-x-4">
             <Link

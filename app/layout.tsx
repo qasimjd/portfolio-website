@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Inter } from 'next/font/google'
 import "./globals.css"
 import { Toaster } from "@/components/ui/sonner"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -16,10 +17,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body className={`${inter.className} bg-background text-foreground antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+        >
           {children}
           <Toaster position="bottom-center" richColors />
+        </ThemeProvider>
       </body>
     </html>
   )

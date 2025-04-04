@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "title": "BookWise",
+        "description": "A comprehensive University Library Management System with user-friendly interfaces for students and administrators.",
+        "image": "/images/bookWise.png",
+        "category": "next.js",
+        "technologies": [
+            "Next.js",
+            "Auth.js",
+            "Server Actions",
+            "MongoDB",
+            "TypeScript",
+            "Tailwind CSS",
+            "Shadcn UI"
+        ],
+        "liveUrl": "https://library.qasimjd.tech",
+        "githubUrl": "https://github.com/qasimjd/University-library",
+        "detailedDescription": "BookWise is a comprehensive University Library Management System featuring an intuitive admin panel for librarians. The platform enables students to browse the catalog, borrow and return books, manage reservations, and track their reading history. Administrators can efficiently manage inventory, monitor circulation, generate reports, and handle user accounts through a secure dashboard interface.",
+        "features": [
+            "Advanced book search and catalog browsing",
+            "Secure user authentication for students and staff",
+            "Book reservation and borrowing management",
+            "Personal reading history and recommendations",
+            "Admin dashboard with inventory management",
+            "Automated notification system for due dates"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Socially",
+        "description": "Full-stack social media platform with authentication, real-time updates, and responsive design.",
+        "image": "/images/socially.png",
+        "category": "next.js",
+        "technologies": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Clerk",
+            "Neon DB",
+            "Prisma"
+        ],
+        "liveUrl": "https://socially-lemon-six.vercel.app/",
+        "githubUrl": "https://github.com/qasimjd/Socially-",
+        "detailedDescription": "Socially is a modern social media platform built with Next.js and powered by Clerk authentication. Users can create profiles, share posts, engage with content through likes and comments, and follow other users. The platform features a responsive design that works seamlessly across desktop and mobile devices. Data is stored in a Neon SQL database with Prisma as the ORM for efficient data management.",
+        "features": [
+            "User authentication and profile management",
+            "Post creation with rich media support",
+            "Real-time notifications and updates",
+            "Responsive UI for all devices",
+            "Follow system with personalized feeds",
+            "Dark/light theme support"
+        ]
+    }
+]

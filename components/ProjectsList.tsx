@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Github, Info } from "lucide-react";
+import { CircleArrowDownIcon, ExternalLink, Github, Info } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -14,6 +14,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Link from "next/link";
+import { BorderBeam } from "./magicui/border-beam";
 
 type Project = {
   id: number;
@@ -42,6 +43,8 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
         <div className="flex flex-col items-center justify-center space-y-4 text-center animate-on-scroll ">
           <div className="inline-block rounded-lg bg-primary/10 border border-primary/20 px-3 py-1 text-sm text-primary">
             My Work
+            <CircleArrowDownIcon className="inline-block ml-2 h-4 w-4 animate-bounce" />
+            
           </div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Projects</h2>
           <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -69,7 +72,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
           {filteredProjects.map((project) => (
             <Card
               key={project.id}
-              className="group overflow-hidden border border-primary/50 bg-muted/10 backdrop-blur-sm hover:shadow-xl transition-all duration-300 animate-on-scroll">
+              className="group overflow-hidden relative bg-muted/10 backdrop-blur-sm hover:shadow-xl transition-all duration-300 animate-on-scroll">
               <div className="aspect-video relative overflow-hidden">
                 <Image
                   src={project.image || "/placeholder.svg"}
@@ -125,34 +128,41 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                       <DialogTitle className="text-xl font-bold">{project.title}</DialogTitle>
                       <DialogDescription>{project.description}</DialogDescription>
                     </DialogHeader>
-                      <div>
-                        <h4 className="font-semibold mb-2">Project Overview</h4>
-                        <p className="text-muted-foreground">{project.detailedDescription}</p>
+                    <div>
+                      <h4 className="font-semibold mb-2">Project Overview</h4>
+                      <p className="text-muted-foreground">{project.detailedDescription}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Key Features</h4>
+                      <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                        {project.features.map((feature, i) => (
+                          <li key={i}>{feature}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Technologies Used</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-blue-500/10 text-blue-500"
+                          >
+                            {tech}
+                          </span>
+                        ))}
                       </div>
-                      <div>
-                        <h4 className="font-semibold mb-2">Key Features</h4>
-                        <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
-                          {project.features.map((feature, i) => (
-                            <li key={i}>{feature}</li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold mb-2">Technologies Used</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech) => (
-                            <span
-                              key={tech}
-                              className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-blue-500/10 text-blue-500"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                    </div>
                   </DialogContent>
                 </Dialog>
               </CardContent>
+
+              <BorderBeam
+                duration={8}
+                size={500}
+                className="from-transparent via-teal-500 to-transparent"
+              />
+             
             </Card>
           ))}
         </div>
