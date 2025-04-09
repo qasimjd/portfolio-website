@@ -40,7 +40,7 @@
             "Neon DB",
             "Prisma"
         ],
-        "liveUrl": "https://socially-lemon-six.vercel.app/",
+        "liveUrl": "https://socially-nine-delta.vercel.app",
         "githubUrl": "https://github.com/qasimjd/Socially-",
         "detailedDescription": "Socially is a modern social media platform built with Next.js and powered by Clerk authentication. Users can create profiles, share posts, engage with content through likes and comments, and follow other users. The platform features a responsive design that works seamlessly across desktop and mobile devices. Data is stored in a Neon SQL database with Prisma as the ORM for efficient data management.",
         "features": [

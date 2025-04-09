@@ -44,7 +44,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
           <div className="inline-block rounded-lg bg-primary/10 border border-primary/20 px-3 py-1 text-sm text-primary">
             My Work
             <CircleArrowDownIcon className="inline-block ml-2 h-4 w-4 animate-bounce" />
-            
+
           </div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Projects</h2>
           <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -72,7 +72,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
           {filteredProjects.map((project) => (
             <Card
               key={project.id}
-              className="group overflow-hidden relative bg-muted/10 backdrop-blur-sm hover:shadow-xl transition-all duration-300 animate-on-scroll">
+              className="group overflow-hidden relative bg-muted/10 backdrop-blur-sm hover:shadow-xl transition-all duration-300 animate-on-scroll border border-gray-200 dark:border-gray-700">
               <div className="aspect-video relative overflow-hidden">
                 <Image
                   src={project.image || "/placeholder.svg"}
@@ -123,7 +123,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                       View Details
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-3xl border border-primary/50">
+                  <DialogContent className="max-w-3xl border border-gray-200 dark:border-gray-700 bg-muted/10 backdrop-blur-sm">
                     <DialogHeader>
                       <DialogTitle className="text-xl font-bold">{project.title}</DialogTitle>
                       <DialogDescription>{project.description}</DialogDescription>
@@ -146,23 +146,30 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                         {project.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-blue-500/10 text-blue-500"
+                            className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-primary/10 text-primary"
                           >
                             {tech}
                           </span>
                         ))}
                       </div>
                     </div>
+
+                    <BorderBeam
+                      duration={10}
+                      size={250}
+                      className="from-transparent via-teal-500 to-transparent"
+                    />
+
                   </DialogContent>
                 </Dialog>
               </CardContent>
 
               <BorderBeam
-                duration={8}
-                size={500}
+                duration={10}
+                size={250}
                 className="from-transparent via-teal-500 to-transparent"
               />
-             
+
             </Card>
           ))}
         </div>
