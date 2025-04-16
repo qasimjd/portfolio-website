@@ -14,7 +14,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Link from "next/link";
-import { BorderBeam } from "./magicui/border-beam";
 
 type Project = {
   id: number;
@@ -154,7 +153,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                         </ul>
                       </section>
 
-                      {/* Technologies Used */}
+                      {/* Technologies */}
                       <section>
                         <h4 className="text-xl font-semibold mb-2">Technologies Used</h4>
                         <div className="flex flex-wrap gap-2">
@@ -164,6 +163,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                               className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-primary/10 text-primary"
                             >
                               {tech}
+
                             </span>
                           ))}
                         </div>
