@@ -116,6 +116,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                     </span>
                   )}
                 </div>
+
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button variant="outline" size="sm" className="w-full">
@@ -123,53 +124,54 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                       View Details
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-3xl border border-gray-200 dark:border-gray-700 bg-black">
-                    <DialogHeader>
-                      <DialogTitle className="text-xl font-bold">{project.title}</DialogTitle>
-                      <DialogDescription>{project.description}</DialogDescription>
+
+                  <DialogContent className="max-w-3xl h-full bg-background text-foreground rounded-xl">
+                    {/* Header */}
+                    <DialogHeader className="mb-6 space-y-2">
+                      <DialogTitle className="text-3xl font-bold tracking-tight">
+                        {project.title}
+                      </DialogTitle>
+                      <DialogDescription className="text-base text-muted-foreground leading-relaxed">
+                        {project.description}
+                      </DialogDescription>
                     </DialogHeader>
-                    <div>
-                      <h4 className="font-semibold mb-2">Project Overview</h4>
-                      <p className="text-muted-foreground">{project.detailedDescription}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Key Features</h4>
-                      <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
-                        {project.features.map((feature, i) => (
-                          <li key={i}>{feature}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Technologies Used</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-primary/10 text-primary"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
 
-                    <BorderBeam
-                      duration={10}
-                      size={200}
-                      className="from-transparent via-teal-500 to-transparent"
-                    />
+                    {/* Scrollable Content */}
+                    <div className="space-y-8 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
+                      {/* Project Overview */}
+                      <section>
+                        <h4 className="text-xl font-semibold mb-2">Project Overview</h4>
+                        <p className="text-muted-foreground leading-relaxed">{project.detailedDescription}</p>
+                      </section>
 
+                      {/* Key Features */}
+                      <section>
+                        <h4 className="text-xl font-semibold mb-2">Key Features</h4>
+                        <ul className="list-disc pl-6 space-y-1 text-muted-foreground">
+                          {project.features.map((feature, i) => (
+                            <li key={i} className="leading-relaxed">{feature}</li>
+                          ))}
+                        </ul>
+                      </section>
+
+                      {/* Technologies Used */}
+                      <section>
+                        <h4 className="text-xl font-semibold mb-2">Technologies Used</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-primary/10 text-primary"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </section>
+                    </div>
                   </DialogContent>
                 </Dialog>
               </CardContent>
-
-              <BorderBeam
-                duration={10}
-                size={200}
-                className="from-transparent via-teal-500 to-transparent"
-              />
-
             </Card>
           ))}
         </div>

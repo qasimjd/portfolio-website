@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -8,7 +8,20 @@ import Link from "next/link"
 
 export function MobileMenu() {
     const [isOpen, setIsOpen] = useState(false)
+    const [activeHash, setActiveHash] = useState("")
+
     const toggleMenu = () => setIsOpen(!isOpen)
+
+    useEffect(() => {
+        const handleHashChange = () => {
+            setActiveHash(window.location.hash)
+        }
+
+        handleHashChange()
+        window.addEventListener("hashchange", handleHashChange)
+
+        return () => window.removeEventListener("hashchange", handleHashChange)
+    }, [isOpen])
 
     return (
         <>
@@ -25,21 +38,31 @@ export function MobileMenu() {
             {isOpen && (
                 <div
                     className={cn(
-                        "fixed inset-x-0 top-[57px] z-50 h-[calc(100vh-57px)] bg-background/95 backdrop-blur-md transition-transform duration-300 md:hidden",
-                        isOpen ? "translate-x-0" : ""
+                        "fixed inset-x-0 top-[57px] z-50 origin-top transform rounded-b-lg bg-background/90 backdrop-blur-lg shadow-lg transition-all duration-300 ease-out md:hidden",
+                        "animate-fade-slide-down"
                     )}
                 >
-                    <nav className="container flex flex-col p-6">
-                        {["Home", "About", "Projects", "Contact"].map((name) => (
-                            <Link
-                                key={name}
-                                href={`#${name.toLowerCase()}`}
-                                className="flex w-full items-center justify-between border-b border-border/30 py-3 font-medium text-muted-foreground transition-colors hover:text-foreground"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {name}
-                            </Link>
-                        ))}
+                    <nav className="container flex flex-col gap-1 py-6 px-4">
+                        {["Home", "About", "Projects", "Contact"].map((name) => {
+                            const hash = `#${name.toLowerCase()}`
+                            const isActive = activeHash === hash
+
+                            return (
+                                <Link
+                                    key={name}
+                                    href={hash}
+                                    onClick={() => setIsOpen(false)}
+                                    className={cn(
+                                        "flex items-center justify-between rounded-md px-4 py-3 text-base font-semibold transition-colors",
+                                        isActive
+                                            ? "bg-primary text-primary-foreground"
+                                            : "text-muted-foreground hover:text-primary hover:bg-primary/10"
+                                    )}
+                                >
+                                    {name}
+                                </Link>
+                            )
+                        })}
                     </nav>
                 </div>
             )}

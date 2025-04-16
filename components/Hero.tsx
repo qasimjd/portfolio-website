@@ -35,11 +35,12 @@ export function Hero() {
                         </BoxReveal>
 
                         <BoxReveal boxColor={"#00b49c"} duration={0.3}>
-                            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none flex flex-wrap items-center gap-3">
+                            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none flex flex-wrap items-center gap-2">
                                 <span>I&apos;m</span>{" "}
                                 <AuroraText className="bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent drop-shadow-sm">
                                     <WordRotate
-                                        words={["Qasim JD", "Full-Stack Developer", "Problem Solver"]}
+                                     duration={3000}
+                                        words={["Qasim JD", "Problem Solver", "Developer"]}
                                         className="font-extrabold hover:scale-[1.01]"
                                     />
                                 </AuroraText>
@@ -53,7 +54,7 @@ export function Hero() {
                         {/* Call to Action Buttons */}
 
                         <BoxReveal boxColor={"#00b49c"} duration={0.3}>
-                            <div className="flex flex-col gap-2 min-[400px]:flex-row transition-all duration-700 delay-300 animate-fade-in">
+                            <div className="flex gap-2 flex-row transition-all duration-700 delay-300 animate-fade-in">
                                 <Button
                                     className="group"
                                     onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
@@ -62,8 +63,9 @@ export function Hero() {
                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </Button>
                                 <Button
-                                    variant="outline"
+                                    variant="ghost"
                                     onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                                    className="border border-gray-500"
                                 >
                                     Contact Me
                                 </Button>
