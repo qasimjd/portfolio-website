@@ -23,7 +23,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
           enableSystem
-        >
+          >
           {children}
           <Toaster position="bottom-center" richColors />
         </ThemeProvider>

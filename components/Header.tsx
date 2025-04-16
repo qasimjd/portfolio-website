@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { ModeToggle } from "./ThemeToggle"
 import { AuroraText } from "./magicui/aurora-text"
 import { MobileMenu } from "./MobileMenu"
 
@@ -19,8 +18,6 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <ModeToggle />
-
           {["Home", "About", "Projects", "Contact"].map((name) => (
             <Link
               key={name}
@@ -30,13 +27,10 @@ export function Header() {
               {name}
             </Link>
           ))}
-
         </nav>
 
         {/* Mobile Navigation */}
-
         <div className="block md:hidden">
-          <ModeToggle />
           <MobileMenu />
         </div>
       </div>

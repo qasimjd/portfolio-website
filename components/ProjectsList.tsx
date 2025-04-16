@@ -118,13 +118,13 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
 
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="outline" size="sm" className="w-full">
+                    <Button variant="ghost" size="sm" className="w-full border border-gray-500">
                       <Info className="mr-2 h-4 w-4" />
                       View Details
                     </Button>
                   </DialogTrigger>
 
-                  <DialogContent className="max-w-3xl h-full bg-background text-foreground rounded-xl">
+                  <DialogContent className="max-w-3xl h-full bg-black text-gray-300 rounded-xl">
                     {/* Header */}
                     <DialogHeader className="mb-6 space-y-2">
                       <DialogTitle className="text-3xl font-bold tracking-tight">
