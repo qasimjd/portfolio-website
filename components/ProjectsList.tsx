@@ -14,6 +14,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Link from "next/link";
+import { AuroraText } from "./magicui/aurora-text";
 
 type Project = {
   id: number;
@@ -128,9 +129,13 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                     {/* Header */}
                     <DialogHeader className="mb-6 space-y-2">
                       <DialogTitle className="text-3xl font-bold tracking-tight">
+
+                      <AuroraText colors={["#00b49c", "#3071ffa2"]}>
                         {project.title}
+                      </AuroraText>
+
                       </DialogTitle>
-                      <DialogDescription className="text-base text-muted-foreground leading-relaxed">
+                      <DialogDescription className="text-base text-slate-400 leading-relaxed">
                         {project.description}
                       </DialogDescription>
                     </DialogHeader>
@@ -140,13 +145,13 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                       {/* Project Overview */}
                       <section>
                         <h4 className="text-xl font-semibold mb-2">Project Overview</h4>
-                        <p className="text-muted-foreground leading-relaxed">{project.detailedDescription}</p>
+                        <p className="text-slate-400 leading-relaxed">{project.detailedDescription}</p>
                       </section>
 
                       {/* Key Features */}
                       <section>
                         <h4 className="text-xl font-semibold mb-2">Key Features</h4>
-                        <ul className="list-disc pl-6 space-y-1 text-muted-foreground">
+                        <ul className="list-disc pl-6 space-y-1 text-slate-400">
                           {project.features.map((feature, i) => (
                             <li key={i} className="leading-relaxed">{feature}</li>
                           ))}

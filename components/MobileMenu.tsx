@@ -14,7 +14,7 @@ export function MobileMenu() {
 
     useEffect(() => {
         const handleHashChange = () => {
-            setActiveHash(window.location.hash)
+            setActiveHash(window.location.hash || "#home")
         }
 
         handleHashChange()

@@ -37,13 +37,11 @@ export function Hero() {
                         <BoxReveal boxColor={"#00b49c"} duration={0.3}>
                             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none flex flex-wrap items-center gap-2">
                                 <span>I&apos;m</span>{" "}
-                                <AuroraText className="bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent drop-shadow-sm">
-                                    <WordRotate
-                                     duration={3000}
-                                        words={["Qasim JD", "Problem Solver", "Developer"]}
-                                        className="font-extrabold hover:scale-[1.01]"
-                                    />
-                                </AuroraText>
+                                <WordRotate
+                                    duration={3000}
+                                    words={["Qasim JD", "Problem Solver", "Developer"]}
+                                    className="font-extrabold hover:scale-[1.01]"
+                                />
                             </h1>
 
                             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed transition-all duration-700 delay-200 animate-fade-in my-2">
