@@ -7,6 +7,7 @@ import Link from "next/link"
 import { AuroraText } from "./magicui/aurora-text"
 import { BoxReveal } from "./magicui/box-reveal"
 import { BorderBeam } from "./magicui/border-beam"
+import { WordRotate } from "./magicui/word-rotate"
 
 export function Hero() {
     return (
@@ -22,23 +23,36 @@ export function Hero() {
                     <div className="flex flex-col justify-center space-y-4 transition-all duration-700">
 
                         <BoxReveal boxColor={"#00b49c"} duration={0.3}>
-                            <div className="inline-block rounded-lg bg-muted/40 border border-border/50 backdrop-blur-sm px-3 py-1 text-sm transition-all duration-700 delay-100 animate-fade-in">
+                            <div className="relative inline-block rounded-lg bg-muted/70 border border-border/50 backdrop-blur-sm px-3 py-1 text-sm transition-all duration-700 delay-100 animate-fade-in">
                                 {"Hello, I'm a Full-Stack Developer"}
+
+                                <BorderBeam
+                                    duration={10}
+                                    size={50}
+                                    className="from-transparent via-teal-500 to-transparent"
+                                />
                             </div>
                         </BoxReveal>
 
                         <BoxReveal boxColor={"#00b49c"} duration={0.3}>
-                            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                                I&apos;m{" "}
-                                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-gradient bg-300%">
-                                    <AuroraText colors={["#00b49c", "#3071ffa2"]}>Qaim JD</AuroraText>
-                                </span>
+                            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none flex flex-wrap items-center gap-3">
+                                <span>I&apos;m</span>{" "}
+                                <AuroraText className="bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent drop-shadow-sm">
+                                    <WordRotate
+                                        words={["Qasim JD", "Full-Stack Developer", "Problem Solver"]}
+                                        className="font-extrabold hover:scale-[1.01]"
+                                    />
+                                </AuroraText>
                             </h1>
 
                             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed transition-all duration-700 delay-200 animate-fade-in my-2">
-                                A passionate developer focused on creating intuitive and dynamic web experiences with modern technologies.
+                                NextJS specialist building high-performance web apps with clean frontend interfaces and robust backend systems.
                             </p>
+                        </BoxReveal>
 
+                        {/* Call to Action Buttons */}
+
+                        <BoxReveal boxColor={"#00b49c"} duration={0.3}>
                             <div className="flex flex-col gap-2 min-[400px]:flex-row transition-all duration-700 delay-300 animate-fade-in">
                                 <Button
                                     className="group"
@@ -58,37 +72,35 @@ export function Hero() {
 
                         {/* Social Links */}
 
-                        <BoxReveal boxColor={"#00b49c"} duration={0.3}>
-                            <div className="flex items-center gap-4 pt-4 text-muted-foreground transition-all duration-700 delay-400 animate-fade-in">
-                                <Link
-                                    href="https://github.com/qasimjd"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hover:text-primary transition-colors"
-                                >
-                                    <Github className="h-5 w-5" />
-                                    <span className="sr-only">GitHub</span>
-                                </Link>
-                                <Link
-                                    href="https://linkedin.com/in/qasimjd"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hover:text-primary transition-colors"
-                                >
-                                    <Linkedin className="h-5 w-5" />
-                                    <span className="sr-only">LinkedIn</span>
-                                </Link>
-                                <Link
-                                    href="https://instagram.com/qasimjd8"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex h-10 w-10 items-center justify-center rounded-full bg-muted/30 text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-                                >
-                                    <Instagram className="h-5 w-5" />
-                                    <span className="sr-only">Instagram</span>
-                                </Link>
-                            </div>
-                        </BoxReveal>
+                        <div className="flex items-center gap-4 pt-4 text-muted-foreground transition-all duration-700 delay-400 animate-fade-in">
+                            <Link
+                                href="https://github.com/qasimjd"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-primary transition-colors"
+                            >
+                                <Github className="h-5 w-5" />
+                                <span className="sr-only">GitHub</span>
+                            </Link>
+                            <Link
+                                href="https://linkedin.com/in/qasimjd"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-primary transition-colors"
+                            >
+                                <Linkedin className="h-5 w-5" />
+                                <span className="sr-only">LinkedIn</span>
+                            </Link>
+                            <Link
+                                href="https://instagram.com/qasimjd8"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex h-10 w-10 items-center justify-center rounded-full bg-muted/30 text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                            >
+                                <Instagram className="h-5 w-5" />
+                                <span className="sr-only">Instagram</span>
+                            </Link>
+                        </div>
 
                     </div>
                     <div className="flex items-center justify-center lg:justify-end">
@@ -102,14 +114,14 @@ export function Hero() {
                                 priority
                             />
                             <BorderBeam
-                                duration={6}
-                                size={400}
+                                duration={8}
+                                size={200}
                                 className="from-transparent via-teal-500 to-transparent"
                             />
                             <BorderBeam
-                                duration={6}
+                                duration={8}
                                 delay={3}
-                                size={400}
+                                size={200}
                                 className="from-transparent via-teal-500 to-transparent"
                             />
                         </div>

@@ -123,7 +123,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                       View Details
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-3xl border border-gray-200 dark:border-gray-700 bg-muted/10 backdrop-blur-sm">
+                  <DialogContent className="max-w-3xl border border-gray-200 dark:border-gray-700 bg-black">
                     <DialogHeader>
                       <DialogTitle className="text-xl font-bold">{project.title}</DialogTitle>
                       <DialogDescription>{project.description}</DialogDescription>
@@ -156,7 +156,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
 
                     <BorderBeam
                       duration={10}
-                      size={250}
+                      size={200}
                       className="from-transparent via-teal-500 to-transparent"
                     />
 
@@ -166,7 +166,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
 
               <BorderBeam
                 duration={10}
-                size={250}
+                size={200}
                 className="from-transparent via-teal-500 to-transparent"
               />
 

@@ -18,28 +18,29 @@ export function About() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mt-16 items-center">
-          <div className="relative aspect-square w-full max-w-[400px] mx-auto overflow-hidden rounded-2xl border border-border/40 bg-muted/20 backdrop-blur-sm">
+          <div className="relative aspect-square w-full max-w-[440px] mx-auto overflow-hidden rounded-2xl border border-border/40 bg-muted/20 backdrop-blur-sm">
             <Image
-              src="/images/img1.jpg"
+              src="/images/img1.png"
               alt="Qasim Jd"
               fill
-              className="object-cover"
+              className="object-fill transition-transform duration-500 hover:scale-105"
             />
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold">Full-Stack Developer &amp; UI/UX Enthusiast</h3>
+            <h3 className="text-2xl font-bold">Full-Stack Developer & Next.js Specialist</h3>
             <p className="text-muted-foreground">
-              I&apos;m Qasim Jd, a passionate full-stack developer with a keen eye for design and user experience. I
-              specialize in building modern, responsive web applications.
+              I&apos;m Qasim Jd, a passionate full-stack developer specializing in Next.js and modern React ecosystems. I
+              build performant, scalable web applications with clean, maintainable code.
             </p>
             <p className="text-muted-foreground">
-              With a background in computer science and several years of experience in web development, I&apos;ve worked on a
-              variety of projects ranging from small business websites to complex web applications. I&apos;m constantly
-              learning and exploring new technologies to stay at the forefront of web development.
+              With expertise in Next.js, React, TypeScript, and full-stack JavaScript development, I create seamless user
+              experiences from frontend to backend. I&apos;m experienced in server-side rendering, API routes, static site
+              generation, and leveraging Next.js for optimal performance and SEO.
             </p>
             <p className="text-muted-foreground">
-              When I&apos;m not coding, you can find me exploring new trends, contributing to open-source projects.
+              When I&apos;m not coding, I stay updated with the latest web features, contribute to open-source projects,
+              and explore new techniques to enhance web application development.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4">
