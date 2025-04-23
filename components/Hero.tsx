@@ -43,7 +43,7 @@ export function Hero() {
                             </h1>
 
                             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed transition-all duration-700 delay-200 animate-fade-in my-2">
-                                NextJS specialist building high-performance web apps with clean frontend interfaces and robust backend systems.
+                                NextJS specialist building high performance web apps with clean frontend interfaces and robust backend systems.
                             </p>
                         </BoxReveal>
 

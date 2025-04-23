@@ -30,7 +30,7 @@ export function About() {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">Full-Stack Developer & Next.js Specialist</h3>
             <p className="text-muted-foreground">
-              I&apos;m Qasim Jd, a passionate full-stack developer specializing in Next.js and modern React ecosystems. I
+              I&apos;m Qasim Javed, a passionate full-stack developer specializing in Next.js and modern React ecosystems. I
               build performant, scalable web applications with clean, maintainable code.
             </p>
             <p className="text-muted-foreground">
