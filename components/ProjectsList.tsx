@@ -129,7 +129,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                     </Button>
                   </DialogTrigger>
 
-                  <DialogContent className="max-w-3xl w-full h-[90vh] rounded-2xl backdrop-blur-md bg-zinc-900/80 text-zinc-100 p-6 md:p-8 overflow-hidden shadow-2xl border border-zinc-700">
+                  <DialogContent className="max-w-3xl w-full h-[90vh] rounded-2xl backdrop-blur-md bg-zinc-900 text-zinc-100 p-6 md:p-8 overflow-hidden shadow-2xl border border-zinc-700">
                     {/* Header */}
                     <DialogHeader className="mb-6">
                       <DialogTitle className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
