@@ -37,7 +37,6 @@ export function Hero() {
                             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none flex flex-wrap items-center gap-2">
                                 <span>I&apos;m</span>{" "}
                                 <WordRotate
-                                    duration={3000}
                                     words={["Qasim JD", "Problem Solver", "Developer"]}
                                     className="font-extrabold hover:scale-[1.01]"
                                 />

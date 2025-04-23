@@ -4,10 +4,10 @@ import Image from "next/image"
 export function About() {
 
   return (
-    <section id="about" className="bg-gradient-to-b py-20 md:py-32 from-background to-background/95 relative z-10">
-      <div className="container px-4 md:px-6">
+    <section className="bg-gradient-to-b py-20 md:py-32 from-background to-background/95 relative z-10">
+      <div id="about" className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center animate-on-scroll">
-          <div className="inline-block rounded-lg bg-primary/10 border border-primary/20 px-3 py-1 text-sm text-primary">
+          <div className="inline-block rounded-lg bg-primary/10 border border-primary/20 pt-4 px-3 py-1 text-sm text-primary">
             About Me
             <CircleArrowDownIcon className="inline-block ml-2 h-4 w-4 animate-bounce" />
           </div>

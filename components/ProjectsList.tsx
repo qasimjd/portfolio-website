@@ -38,15 +38,15 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
       : projects.filter((project) => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 md:py-32">
-      <div className="container px-4 md:px-6">
+    <section className="py-20 md:py-32">
+      <div id="projects" className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center animate-on-scroll ">
           <div className="inline-block rounded-lg bg-primary/10 border border-primary/20 px-3 py-1 text-sm text-primary">
             My Work
             <CircleArrowDownIcon className="inline-block ml-2 h-4 w-4 animate-bounce" />
 
           </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Projects</h2>
+          <h2 className="text-3xl pt-4 font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Projects</h2>
           <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Explore some of my recent projects and the technologies I&apos;ve worked with.
           </p>
@@ -111,7 +111,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-muted/50 text-muted-foreground">
+                    <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-primary/10 text-primary hover:bg-primary/20">
                       +{project.technologies.length - 3}
                     </span>
                   )}
@@ -119,56 +119,55 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
 
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="ghost" size="sm" className="w-full border border-gray-500">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="w-full border border-gray-600 hover:border-gray-400 transition-colors"
+                    >
                       <Info className="mr-2 h-4 w-4" />
                       View Details
                     </Button>
                   </DialogTrigger>
 
-                  <DialogContent className="max-w-3xl h-full bg-black text-gray-300 rounded-xl">
+                  <DialogContent className="max-w-3xl w-full h-[90vh] rounded-2xl backdrop-blur-md bg-zinc-900/80 text-zinc-100 p-6 md:p-8 overflow-hidden shadow-2xl border border-zinc-700">
                     {/* Header */}
-                    <DialogHeader className="mb-6 space-y-2">
-                      <DialogTitle className="text-3xl font-bold tracking-tight">
-
-                      <AuroraText colors={["#00b49c", "#3071ffa2"]}>
-                        {project.title}
-                      </AuroraText>
-
+                    <DialogHeader className="mb-6">
+                      <DialogTitle className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
+                        <AuroraText colors={["#00b49c", "#3071ffa2"]}>{project.title}</AuroraText>
                       </DialogTitle>
-                      <DialogDescription className="text-base text-slate-400 leading-relaxed">
+                      <DialogDescription className="text-base md:text-lg text-zinc-400 mt-2">
                         {project.description}
                       </DialogDescription>
                     </DialogHeader>
 
                     {/* Scrollable Content */}
-                    <div className="space-y-8 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
-                      {/* Project Overview */}
+                    <div className="space-y-10 overflow-y-scroll max-h-[65vh] pr-3 custom-scrollbar text-sm md:text-base">
+                      {/* Overview */}
                       <section>
-                        <h4 className="text-xl font-semibold mb-2">Project Overview</h4>
-                        <p className="text-slate-400 leading-relaxed">{project.detailedDescription}</p>
+                        <h4 className="text-xl font-semibold mb-2 text-white">Project Overview</h4>
+                        <p className="text-zinc-400 leading-relaxed whitespace-pre-line">{project.detailedDescription}</p>
                       </section>
 
-                      {/* Key Features */}
+                      {/* Features */}
                       <section>
-                        <h4 className="text-xl font-semibold mb-2">Key Features</h4>
-                        <ul className="list-disc pl-6 space-y-1 text-slate-400">
-                          {project.features.map((feature, i) => (
-                            <li key={i} className="leading-relaxed">{feature}</li>
+                        <h4 className="text-xl font-semibold mb-2 text-white">Key Features</h4>
+                        <ul className="list-disc pl-6 space-y-2 text-zinc-400">
+                          {project.features.map((feature, index) => (
+                            <li key={index} className="leading-relaxed">{feature}</li>
                           ))}
                         </ul>
                       </section>
 
                       {/* Technologies */}
                       <section>
-                        <h4 className="text-xl font-semibold mb-2">Technologies Used</h4>
+                        <h4 className="text-xl font-semibold mb-2 text-white">Technologies Used</h4>
                         <div className="flex flex-wrap gap-2">
                           {project.technologies.map((tech) => (
                             <span
                               key={tech}
-                              className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-primary/10 text-primary"
+                              className="rounded-full border border-zinc-700 bg-zinc-800/40 px-3 py-1 text-xs font-medium text-primary"
                             >
                               {tech}
-
                             </span>
                           ))}
                         </div>
@@ -176,6 +175,8 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
                     </div>
                   </DialogContent>
                 </Dialog>
+
+
               </CardContent>
             </Card>
           ))}

@@ -50,10 +50,10 @@ export function Contact() {
     }
 
     return (
-        <section id="contact" className="py-20 md:py-32">
-            <div className="container px-4 md:px-6">
+        <section className="py-20 md:py-32">
+            <div id="contact" className="container px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center animate-on-scroll">
-                    <div className="inline-block rounded-lg bg-primary/10 border border-primary/20 px-3 py-1 text-sm text-primary">
+                    <div className="inline-block rounded-lg bg-primary/10 border border-primary/20 pt-4 px-3 py-1 text-sm text-primary">
                         Get In Touch
                         <CircleArrowDownIcon className="inline-block ml-2 h-4 w-4 animate-bounce" />
 

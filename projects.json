@@ -15,7 +15,7 @@
             "Shadcn UI"
         ],
         "liveUrl": "https://library.qasimjd.tech",
-        "githubUrl": "https://github.com/qasimjd/University-library",
+        "githubUrl": "https://github.com/qasimjd/university-library",
         "detailedDescription": "BookWise is a comprehensive University Library Management System featuring an intuitive admin panel for librarians. The platform enables students to browse the catalog, borrow and return books, manage reservations, and track their reading history. Administrators can efficiently manage inventory, monitor circulation, generate reports, and handle user accounts through a secure dashboard interface.",
         "features": [
             "Advanced book search and catalog browsing",
@@ -41,7 +41,7 @@
             "Prisma"
         ],
         "liveUrl": "https://socially-nine-delta.vercel.app",
-        "githubUrl": "https://github.com/qasimjd/Socially-",
+        "githubUrl": "https://github.com/qasimjd/socially",
         "detailedDescription": "Socially is a modern social media platform built with Next.js and powered by Clerk authentication. Users can create profiles, share posts, engage with content through likes and comments, and follow other users. The platform features a responsive design that works seamlessly across desktop and mobile devices. Data is stored in a Neon SQL database with Prisma as the ORM for efficient data management.",
         "features": [
             "User authentication and profile management",
@@ -50,6 +50,35 @@
             "Responsive UI for all devices",
             "Follow system with personalized feeds",
             "Dark/light theme support"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "JD-Startups",
+        "description": "Modern startup idea platform showcasing Next.js 15's latest features.",
+        "image": "/images/jdstartups.png",
+        "category": "next.js",
+        "technologies": [
+            "React 19",
+            "Next.js 15",
+            "TypeScript",
+            "Tailwind CSS",
+            "Auth.js",
+            "Sanity"
+        ],
+        "liveUrl": "https://jd-startups.vercel.app",
+        "githubUrl": "https://github.com/qasimjd/jd-Startups",
+        "detailedDescription": "A platform for sharing startup ideas that demonstrates Next.js 15's cutting-edge features including Forms, Unstable After, Server Component HMR Cache, and Partial Prerendering for optimal performance.",
+        "features": [
+            "Dynamic startup ideas display using Sanity's Content API",
+            "GitHub account authentication integration",
+            "Real-time notifications and updates",
+            "Category-based filtering options",
+            "Personal pitch submission tracking",
+            "Editor Picks feature for admin highlights",
+            "View tracking for each pitch",
+            "Efficient search functionality",
+            "Clean, minimalist UI design"
         ]
     }
 ]
