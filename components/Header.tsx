@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { AuroraText } from "./magicui/aurora-text"
 import { MobileMenu } from "./MobileMenu"
+import { ModeToggle } from "./ThemeToggle"
 
 export function Header() {
   return (
@@ -27,6 +28,7 @@ export function Header() {
               {name}
             </Link>
           ))}
+          <ModeToggle />
         </nav>
 
         {/* Mobile Navigation */}

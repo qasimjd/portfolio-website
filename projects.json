@@ -1,36 +1,9 @@
 [
     {
-        "id": 1,
-        "title": "BookWise",
-        "description": "A comprehensive University Library Management System with user-friendly interfaces for students and administrators.",
-        "image": "/images/bookWise.png",
-        "category": "next.js",
-        "technologies": [
-            "Next.js",
-            "Auth.js",
-            "Server Actions",
-            "MongoDB",
-            "TypeScript",
-            "Tailwind CSS",
-            "Shadcn UI"
-        ],
-        "liveUrl": "https://library.qasimjd.tech",
-        "githubUrl": "https://github.com/qasimjd/university-library",
-        "detailedDescription": "BookWise is a comprehensive University Library Management System featuring an intuitive admin panel for librarians. The platform enables students to browse the catalog, borrow and return books, manage reservations, and track their reading history. Administrators can efficiently manage inventory, monitor circulation, generate reports, and handle user accounts through a secure dashboard interface.",
-        "features": [
-            "Advanced book search and catalog browsing",
-            "Secure user authentication for students and staff",
-            "Book reservation and borrowing management",
-            "Personal reading history and recommendations",
-            "Admin dashboard with inventory management",
-            "Automated notification system for due dates"
-        ]
-    },
-    {
-        "id": 2,
-        "title": "Socially",
-        "description": "Full-stack social media platform with authentication, real-time updates, and responsive design.",
-        "image": "/images/socially.png",
+        "id": 0,
+        "title": "FormPilot",
+        "description": "AI-powered form builder with real-time editing, analytics, and secure user authentication.",
+        "image": "/images/formPilot.png",
         "category": "next.js",
         "technologies": [
             "Next.js",
@@ -38,22 +11,31 @@
             "Tailwind CSS",
             "Clerk",
             "Neon DB",
-            "Prisma"
+            "Drizzle ORM",
+            "Google Gemini",
+            "Zustand",
+            "Radix UI",
+            "Recharts",
+            "Stripe",
+            "Sonner",
+            "Framer Motion"
         ],
-        "liveUrl": "https://socially-nine-delta.vercel.app",
-        "githubUrl": "https://github.com/qasimjd/socially",
-        "detailedDescription": "Socially is a modern social media platform built with Next.js and powered by Clerk authentication. Users can create profiles, share posts, engage with content through likes and comments, and follow other users. The platform features a responsive design that works seamlessly across desktop and mobile devices. Data is stored in a Neon SQL database with Prisma as the ORM for efficient data management.",
+        "liveUrl": "https://saas-formpilot.vercel.app/",
+        "githubUrl": "https://github.com/qasimjd/formPilot",
+        "detailedDescription": "FormPilot is an AI-powered form builder built with Next.js 15. It allows users to create and customize forms using AI-generated schemas, manage submissions, and view analytics. With a sleek, responsive design powered by Tailwind CSS and Radix UI, FormPilot ensures a modern and accessible user experience. Authentication is securely handled by Clerk, and data is stored in Neon Postgres using Drizzle ORM. FormPilot also supports exporting responses to Excel, viewing analytics through Recharts, and upgrading to Pro plans via Stripe integration.",
         "features": [
-            "User authentication and profile management",
-            "Post creation with rich media support",
-            "Real-time notifications and updates",
-            "Responsive UI for all devices",
-            "Follow system with personalized feeds",
-            "Dark/light theme support"
+            "AI form generation from user descriptions",
+            "Instant form previews and real-time editing",
+            "Response management dashboard",
+            "Live form analytics and engagement tracking",
+            "Excel export support for form responses",
+            "Clerk-based secure sign-in and user management",
+            "Modern UI with Tailwind CSS",
+            "Subscription payments via Stripe for Pro plans"
         ]
     },
     {
-        "id": 3,
+        "id": 2,
         "title": "JD-Startups",
         "description": "Modern startup idea platform showcasing Next.js 15's latest features.",
         "image": "/images/jdstartups.png",
@@ -80,6 +62,62 @@
             "Efficient search functionality",
             "Clean, minimalist UI design",
             "Responsive design for all devices"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Socially",
+        "description": "Full-stack social media platform with authentication, real-time updates, and responsive design.",
+        "image": "/images/socially.png",
+        "category": "next.js",
+        "technologies": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Clerk",
+            "Neon DB",
+            "Prisma"
+        ],
+        "liveUrl": "https://socially-nine-delta.vercel.app",
+        "githubUrl": "https://github.com/qasimjd/socially",
+        "detailedDescription": "Socially is a modern social media platform built with Next.js and powered by Clerk authentication. Users can create profiles, share posts, engage with content through likes and comments, and follow other users. The platform features a responsive design that works seamlessly across desktop and mobile devices. Data is stored in a Neon SQL database with Prisma as the ORM for efficient data management.",
+        "features": [
+            "User authentication and profile management",
+            "Post creation with rich media support",
+            "Real-time notifications and updates",
+            "Responsive UI for all devices",
+            "Follow system with personalized feeds",
+            "Dark/light theme support"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "BookWise",
+        "description": "A comprehensive University Library Management System with user-friendly interfaces for students and administrators.",
+        "image": "/images/bookWise.png",
+        "category": "next.js",
+        "technologies": [
+            "Next.js",
+            "Auth.js",
+            "upstash",
+            "Q-Stash",
+            "Server Actions",
+            "MongoDB",
+            "TypeScript",
+            "Tailwind CSS",
+            "Shadcn UI"
+        ],
+        "liveUrl": "https://library.qasimjd.tech",
+        "githubUrl": "https://github.com/qasimjd/university-library",
+        "detailedDescription": "BookWise is a comprehensive University Library Management System featuring an intuitive admin panel for librarians. The platform enables students to browse the catalog, borrow and return books, manage reservations, and track their reading history. Administrators can efficiently manage inventory, monitor circulation, generate reports, and handle user accounts through a secure dashboard interface.",
+        "features": [
+            "Advanced book search and catalog browsing",
+            "Secure user authentication for students and staff",
+            "Rate limiting and caching for optimal performance",
+            "Book reservation and borrowing management",
+            "Personal reading history and recommendations",
+            "Admin dashboard with inventory management",
+            "Automated notification system for due dates"
         ]
     }
 ]

@@ -44,7 +44,6 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
           <div className="inline-block rounded-lg bg-primary/10 border border-primary/20 px-3 py-1 text-sm text-primary">
             My Work
             <CircleArrowDownIcon className="inline-block ml-2 h-4 w-4 animate-bounce" />
-
           </div>
           <h2 className="text-3xl pt-4 font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Projects</h2>
           <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -55,7 +54,7 @@ export default function ProjectsList({ projects }: { projects: Project[] }) {
         <div
           className="flex justify-center mt-10 mb-12 animate-on-scroll">
           <div className="flex flex-wrap gap-2 justify-center">
-            {["all", "next.js", "vite", "frontend"].map((filter) => (
+            {["all", "next.js", "frontend"].map((filter) => (
               <Button
                 key={filter}
                 variant={activeFilter === filter ? "default" : "outline"}
